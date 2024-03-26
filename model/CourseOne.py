@@ -1,11 +1,11 @@
-class Course:
+class CourseOne:
     def __init__(self,name,size,course_price):
         self.name = name
         self.__size = size
         self.__students = []
         self.course_price = course_price
 
-    def add_student(self, student):
+    def add_student(self,student):
         if len(self.__students) < self.__size:
             self.__students.append(student)
             self.course_price = self.__calculate_course_price(student)
@@ -32,7 +32,6 @@ class Course:
     @students.setter
     def students(self,students):
         self.__students = students
-
 
     def __calculate_course_price(self,student):
         if student.discount > 0:
